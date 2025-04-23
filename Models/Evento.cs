@@ -1,9 +1,12 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace parcial3.Models
 {
+    [Table("Eventos")]
     public class Evento
-    {
+    {   
+        [Key]
         public int IdEventos { get; set; }
         public int IdAdministrador { get; set; }
         public string TipoEvento { get; set; }
