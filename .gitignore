@@ -1,0 +1,35 @@
+# Build
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# EF Core
+Migrations/
+
+# Others
+*.sqlite
+*.mdf
+*.ldf
+*.db
+*.bak
+
+# ASP.NET Core
+wwwroot/lib/
+.env
