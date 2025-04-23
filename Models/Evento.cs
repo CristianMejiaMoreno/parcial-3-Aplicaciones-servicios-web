@@ -5,10 +5,13 @@ namespace parcial3.Models
 {
     [Table("Eventos")]
     public class Evento
-    {   
+    {
         [Key]
         public int IdEventos { get; set; }
+
+        [ForeignKey("Administrador")]
         public int IdAdministrador { get; set; }
+
         public string TipoEvento { get; set; }
         public string NombreEvento { get; set; }
         public int TotalIngreso { get; set; }

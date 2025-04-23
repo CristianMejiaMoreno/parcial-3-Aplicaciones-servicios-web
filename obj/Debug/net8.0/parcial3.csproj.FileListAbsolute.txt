@@ -206,3 +206,4 @@ C:\Users\juand\Documents\Examen3\parcial-3-Aplicaciones-servicios-web\obj\Debug\
 C:\Users\juand\Documents\Examen3\parcial-3-Aplicaciones-servicios-web\obj\Debug\net8.0\parcial3.pdb
 C:\Users\juand\Documents\Examen3\parcial-3-Aplicaciones-servicios-web\obj\Debug\net8.0\parcial3.genruntimeconfig.cache
 C:\Users\juand\Documents\Examen3\parcial-3-Aplicaciones-servicios-web\obj\Debug\net8.0\ref\parcial3.dll
+C:\Users\juand\Documents\Examen3\parcial-3-Aplicaciones-servicios-web\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
