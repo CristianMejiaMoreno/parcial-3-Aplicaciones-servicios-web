@@ -54,5 +54,20 @@ namespace parcial3.Controllers
             return Ok(new { mensaje = "Evento actualizado correctamente." });
         }
 
+        [Authorize]
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> EliminarEvento(int id)
+        {
+            var usuario = User.Identity?.Name;
+            if (string.IsNullOrEmpty(usuario)) return Unauthorized();
+
+            var eliminado = await _eventoService.EliminarEventoAsync(id, usuario);
+
+            if (!eliminado)
+                return NotFound(new { mensaje = "Evento no encontrado o no pertenece al usuario." });
+
+            return Ok(new { mensaje = "Evento eliminado correctamente." });
+        }
+
     }
 }

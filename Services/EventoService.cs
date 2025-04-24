@@ -86,6 +86,21 @@ namespace parcial3.Services
             await _context.SaveChangesAsync();
             return true;
         }
+        public async Task<bool> EliminarEventoAsync(int idEvento, string usuario)
+        {
+            var admin = await _context.Administradores.FirstOrDefaultAsync(a => a.Usuario == usuario);
+            if (admin == null) return false;
+
+            var evento = await _context.Eventos
+                .FirstOrDefaultAsync(e => e.IdEventos == idEvento && e.IdAdministrador == admin.IdAministrador);
+
+            if (evento == null) return false;
+
+            _context.Eventos.Remove(evento);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
 
     }
 }
