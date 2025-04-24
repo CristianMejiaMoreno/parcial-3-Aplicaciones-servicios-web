@@ -27,5 +27,16 @@ namespace parcial3.Controllers
             var eventoCreado = await _eventoService.CrearEventoAsync(dto, usuario);
             return Ok(eventoCreado);
         }
+
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> ObtenerEventos([FromQuery] string? tipo, [FromQuery] string? nombre, [FromQuery] DateTime? fecha)
+        {
+            var usuario = User.Identity?.Name;
+            if (string.IsNullOrEmpty(usuario)) return Unauthorized();
+
+            var eventos = await _eventoService.ObtenerEventosAsync(usuario, tipo, nombre, fecha);
+            return Ok(eventos);
+        }
     }
 }
